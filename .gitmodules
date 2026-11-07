@@ -1,0 +1,18 @@
+[submodule "vasyaapp"]
+	path = vasyaapp
+	url = git@github.com:suenot/vasyaapp.git
+[submodule "vasyaapp-native"]
+	path = vasyaapp-native
+	url = git@github.com:suenot/vasyaapp-native.git
+[submodule "vasya-landing"]
+	path = vasya-landing
+	url = git@github.com:suenot/vasya-landing.git
+[submodule "vasya-landing-astro"]
+	path = vasya-landing-astro
+	url = git@github.com:suenot/vasya-landing-astro.git
+[submodule "sdvg-vasyapp"]
+	path = sdvg-vasyapp
+	url = git@github.com:suenot/sdvg-vasyapp.git
+[submodule "vasya-backend"]
+	path = vasya-backend
+	url = git@github.com:suenot/vasya-backend.git
