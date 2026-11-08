@@ -97,6 +97,10 @@ with an in-app warning about ToS and ban risk before the user links an account.
 1. Reconcile the two `vasya-core` copies (T5), otherwise the trait is built twice.
 2. Create `vasya-channel`; wrap the current Telegram code behind it with no behaviour
    change; add `provider` to DTOs and the providers routes. Ship with only Telegram.
+   **Done in vasya-engine v0.2.0.** Trait methods take a `Caller` (the server checks
+   account ownership); enable/disable is admin-only and saved in `providers.json`;
+   Telegram account and login routes answer `404 provider_disabled` when it is off.
+   Not yet: generic `/api/v1/{provider}/...` chat routes, `provider` in SSE events.
 3. Email provider (IMAP/SMTP) as the first non-Telegram proof that the trait is right.
 4. WhatsApp import, then Cloud API.
 5. Settings UI: provider list with enable/disable and capability-driven views.
