@@ -59,3 +59,17 @@ Also: `vasya-backend` exists twice (standalone repo and `vasyaapp-native/crates`
 - T4 research builds on step 4.
 - T6 landing diagram can already show: core -> server API -> web / Tauri / native /
   agents.
+
+## Merge progress (2026-11-08)
+
+- `vasya-core`: after `rustfmt` on both sides only two files really differed. The one
+  real difference (logout-safe session removal, `disable_persistence`) is now in the
+  Tauri repo (vasyaapp `ba9ba59`). Behaviorally the two core copies are now equal.
+  The native copy lacks the vendored `grammers-session` channel-id fix, so it still
+  has the `unreachable!()` panic on some channel ids.
+- `vasya-server`: native has real extra hardening/features (about 270 changed lines in
+  8 files): media header validation (`x-topic-id`, `x-voice`), `native:resync` SSE
+  event after a lagged consumer, no token printed to stdout, translation scope.
+  Needs a careful merge, not a copy.
+- Still open: where the single source lives. Native depending on a path inside the
+  vasyaapp repo is fragile; a separate repo (or workspace) is cleaner.
