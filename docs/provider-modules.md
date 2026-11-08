@@ -104,5 +104,5 @@ with an in-app warning about ToS and ban risk before the user links an account.
 ### Open questions for you
 
 - ~~Personal WhatsApp account?~~ Yes, answered: opt-in tier 3.
-- Email: only IMAP/SMTP at first, or Gmail OAuth from day one?
-- Should a disabled provider keep its stored sessions, or drop them?
+- ~~Email scope?~~ Answered: IMAP/SMTP only at first (Gmail OAuth later, if ever).
+- Disabled provider and stored sessions: default = keep them (encrypted), offer "remove data" as a separate action. Say if you want the opposite.
