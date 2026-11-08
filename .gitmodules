@@ -16,3 +16,6 @@
 [submodule "vasya-backend"]
 	path = vasya-backend
 	url = git@github.com:suenot/vasya-backend.git
+[submodule "vasya-engine"]
+	path = vasya-engine
+	url = git@github.com:suenot/vasya-engine.git
