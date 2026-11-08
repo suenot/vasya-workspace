@@ -88,7 +88,9 @@ nearly all; WhatsApp Cloud API has SEND and LIVE_UPDATES (webhook) only.
 | WhatsApp, tier 2 | official Cloud API: needs a Business number, public webhook endpoint, templates after 24 h | server must be reachable from Meta; fits web-first (T5) |
 | WhatsApp, tier 3 | personal account via an unofficial multi-device library | violates WhatsApp ToS, account bans possible: opt-in feature flag with a warning, never default |
 
-Recommendation: tier 1 + tier 2 first. Tier 3 only if you accept the ban risk.
+**Decision (2026-11-08): personal account (tier 3) is wanted too.** Build order stays
+tier 1, tier 2, then tier 3 behind a Cargo feature `whatsapp-personal`, off by default,
+with an in-app warning about ToS and ban risk before the user links an account.
 
 ### Order of work
 
@@ -101,6 +103,6 @@ Recommendation: tier 1 + tier 2 first. Tier 3 only if you accept the ban risk.
 
 ### Open questions for you
 
-- Is a personal WhatsApp account (tier 3) required, or is the Business Cloud API enough?
+- ~~Personal WhatsApp account?~~ Yes, answered: opt-in tier 3.
 - Email: only IMAP/SMTP at first, or Gmail OAuth from day one?
 - Should a disabled provider keep its stored sessions, or drop them?
