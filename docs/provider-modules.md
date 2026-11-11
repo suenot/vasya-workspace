@@ -101,7 +101,7 @@ with an in-app warning about ToS and ban risk before the user links an account.
    account ownership); enable/disable is admin-only and saved in `providers.json`;
    Telegram account and login routes answer `404 provider_disabled` when it is off.
    Not yet: generic `/api/v1/{provider}/...` chat routes, `provider` in SSE events.
-3. Email provider (IMAP/SMTP) as the first non-Telegram proof that the trait is right.
+3. ~~Email provider (IMAP/SMTP)~~ done in vasya-engine v0.3.0: TLS-only IMAP/SMTP, accounts at `/api/v1/email/accounts` (human session only, encrypted per user), generic `/api/v1/providers/{id}/accounts/{acc}/chats...` routes. Not yet: `provider` in SSE events, settings UI.
 4. WhatsApp import, then Cloud API.
 5. Settings UI: provider list with enable/disable and capability-driven views.
 
