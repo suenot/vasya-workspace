@@ -110,3 +110,9 @@ with an in-app warning about ToS and ban risk before the user links an account.
 - ~~Personal WhatsApp account?~~ Yes, answered: opt-in tier 3.
 - ~~Email scope?~~ Answered: IMAP/SMTP only at first (Gmail OAuth later, if ever).
 - ~~Disabled provider and stored sessions?~~ Answered: keep them (encrypted). Removing data is a separate UI action.
+
+
+## Priority and reuse
+
+Provider priority: email, WhatsApp, Telegram. Other networks come later.
+link-foundation/meta-sovereign is Unlicense (public domain), so its logic can be ported to Rust freely. First candidate: `js/src/sources/whatsapp-archive.js` and `whatsapp-ids.js` (chat export parser, stable message ids).
